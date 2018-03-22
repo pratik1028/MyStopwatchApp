@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.application.mystopwatch.activity_stopwatch">
+
+    <TextView
+        android:id="@+id/time_view"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="53dp"
+        android:text=""
+        android:textSize="92sp" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="onClickStart"
+        android:text="@string/start" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/start_button"
+        android:layout_alignStart="@+id/start_button"
+        android:layout_below="@+id/start_button"
+        android:layout_marginTop="11dp"
+        android:onClick="onClickStop"
+        android:text="@string/stop" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/stop_button"
+        android:layout_alignStart="@+id/stop_button"
+        android:layout_below="@+id/stop_button"
+        android:layout_marginTop="16dp"
+        android:onClick="onClickReset"
+        android:text="@string/reset" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reset_button"
+        android:layout_alignStart="@+id/reset_button"
+        android:layout_below="@+id/reset_button"
+        android:layout_marginTop="12dp"
+        android:onClick="onClickLap"
+        android:text="Lap" />
+
+    <TextView
+        android:id="@+id/time_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/start_button"
+        android:layout_marginBottom="12dp"
+
+        android:layout_toRightOf="@+id/textView3"
+        android:text=" 0:00:00"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+        android:layout_alignBottom="@+id/time_view1"
+
+
+        android:text="Previos Lap:"
+        android:textSize="22sp" />
+</RelativeLayout>
